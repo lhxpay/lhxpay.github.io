@@ -197,3 +197,8 @@ JSON 响应内容
 `{error: "success", "result": {Mrn: "平台单号", status: 0/1/2}}`
 
 status 为0时表示等待下发，1表示下发成功，2表示下发失败。如果返回的status是1且callback是true，那么平台会再次回调callbackUrl，请参考下发回调说明。
+
+## 示例代码
+
+1. [PHP](https://github.com/lhxpay/phpsample/)
+2. [Java](https://github.com/lhxpay/springbootsample/)
