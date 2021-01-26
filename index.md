@@ -69,7 +69,7 @@ title: 联合支付对接说明文档
 
 ### 充值回调说明
 
-平台将所有的回调参数按照`application/x-www-form-urlencoded`以表单的形式用POST方式提交到充值时所留下的callBackUrl参数所指定的地址中，IP白名单请联系客服，回调成功时，商户应返回HTTP Status 200并以`success`字样作为响应内容。
+平台将所有的回调参数按照`application/x-www-form-urlencoded`以表单的形式用POST方式提交到充值时所留下的callbackUrl参数所指定的地址中，IP白名单请联系客服，回调成功时，商户应返回HTTP Status 200并以`success`字样作为响应内容。
 
 ### 充值查单接口说明
 
@@ -176,7 +176,7 @@ status 为0时表示等待客人支付，1表示支付成功，2表示支付失�
 
 ### 下发回调说明
 
-平台将所有的回调参数按照`application/x-www-form-urlencoded`以表单的形式用POST方式提交到充值时所留下的callBackUrl参数所指定的地址中，IP白名单请联系客服，回调成功时，商户应返回HTTP Status 200并以`success`字样作为响应内容。
+平台将所有的回调参数按照`application/x-www-form-urlencoded`以表单的形式用POST方式提交到充值时所留下的callbackUrl参数所指定的地址中，IP白名单请联系客服，回调成功时，商户应返回HTTP Status 200并以`success`字样作为响应内容。
 
 ### 下发查单接口说明
 
