@@ -23,7 +23,7 @@ title: 联合支付对接说明文档
 
 请求数据签名格式
 
-`amount=金额&appKey=Key&callbackUrl=回调地址&channelId=通道ID&mrn=平台单号&returnUrl=返回地址&Key=商户密钥`
+`amount=金额&appKey=Key&callbackUrl=回调地址&channelId=通道ID&mrn=平台单号&returnUrl=返回地址&key=商户密钥`
 
 >其中**商户密钥**为商户接口的密钥信息，如果不清楚请联系客服
 
