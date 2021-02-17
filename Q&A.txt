@@ -4,7 +4,7 @@ Q1:我们提供哪些接口?
 Ans:
 分为充值接口与下发接口其中充值接口分为页面对接与WebApi对接模式，如需取得支付页面地址，请使用WebApi对接模式。
 
-Q2:为什么充值接口WebApi对接模式，会返回http的错误415?
+Q2:为什么充值接口WebApi对接模式，会返回http的错误415(unsupported media type)?
 Ans:
 在请求的headers里面，增加Content-Type:application/json。
 
