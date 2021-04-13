@@ -41,10 +41,29 @@ title: 联合支付对接说明文档
 `{
     success: true/false,
     errorMsg: 错误信息,
-    payUrl: 支付页面跳转地址
+    payUrl: 支付页面跳转地址,
+    collectionAccount: 收款账号信息（限认证商户）
 }`
 
 其中，支付页面跳转地址仅包含URL中的Path和QueryString部分，没有Protocol和Host，比如/api/Pay?id=some-id&channel=SomeChannel，商户需要根据当前的相关对接网关地址拼接最后的跳转地址，跳转后，充值控制权交与相关充值平台。
+
+如果商户为系统认证商户（商户可以提供充值网站地址，在我们进行安全扫描和评估以后可申请成为认证商户），collectionAccount 返回如下信息，
+
+``` json
+{
+    "success": true,
+    "errorMsg": "错误信息",
+    "payUrl": "支付页面跳转地址",
+    "collectionAccount": {
+        "provider": "如果是银行卡，该字段为银行名称，其余的该字段没有意义",
+        "holderName": "账户名",
+        "accountName": "银行账号或者支付宝微信账号",
+        "phoneNumber": "手机号码（仅限微信支付）",
+        "province": "所在省份（可能为null）",
+        "city": "所在城市（可能为null）"
+    }
+}
+```
 
 ### 充值回调参数说明
 
