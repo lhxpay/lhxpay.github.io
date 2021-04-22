@@ -57,7 +57,7 @@ title: 联合支付对接说明文档
     "collectionAccount": {
         "provider": "如果是银行卡，该字段为银行名称，其余的该字段没有意义",
         "holderName": "账户名",
-        "accountName": "银行账号或者支付宝微信账号",
+        "accountNumber": "银行账号或者支付宝微信账号",
         "phoneNumber": "手机号码（仅限微信支付）",
         "province": "所在省份（可能为null）",
         "city": "所在城市（可能为null）"
