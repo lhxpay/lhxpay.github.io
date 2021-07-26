@@ -221,6 +221,43 @@ JSON 响应内容
 
 status 为0时表示等待下发，1表示下发成功，2表示下发失败。如果返回的status是1且callback是true，那么平台会再次回调callbackUrl，请参考下发回调说明。
 
+## 查询商户余额接口
+
+### 查询商户余额接口参数说明
+
+|参数|必须|描述|
+|---|---|---|
+|appKey|是|商户用户接口调用的Key信息，如果不清楚请联系客服|
+|sign|是|请求信息的签名信息，请参考充值接口签名说明|
+
+### 查询商户余额接口说明
+
+HTTP WebAPI 请求
+
+`GET /api/Merchants/Balance?appKey=商户Key&sign=签名`
+
+### 查询商户余额签名说明
+
+请求数据签名格式
+
+`appKey=商户Key&key=商户密钥`
+
+>其中**商户密钥**为商户接口的密钥信息，如果不清楚请联系客服
+
+签名为以上数据格式的MD5哈希以后32个字节的HEX小写字符串
+
+JSON 响应内容
+
+`{error: "success", "result": "商户余额"}`
+
+当error为success时表示查询商户余额请求成功，请等待回调。否则，请参考如下错误表
+
+|错误代码|描述|
+|---|---|
+|invalid_data|无效的请求数据，请检查您的请求参数|
+|sign_error|签名错误|
+|merchant_not_found|无效的商户账户|
+
 ## 示例代码
 
 1. [PHP](https://github.com/lhxpay/phpsample/)
