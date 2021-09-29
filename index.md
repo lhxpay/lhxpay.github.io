@@ -110,7 +110,7 @@ HTTP WebAPI 请求
 
 JSON 响应内容
 
-`{error: "success", "result": {mrn: "平台单号", status: 0/1/2}}`
+`{error: "success", "result": {mrn: "平台单号", status: 0/1/2, amount: "实际金额", originalAmount: "请求金额"}}`
 
 status 为0时表示等待客人支付，1表示支付成功，2表示支付失败。如果返回的status是1且callback是true，那么平台会再次回调callbackUrl，请参考充值回调说明。
 
@@ -221,7 +221,7 @@ HTTP WebAPI 请求
 
 JSON 响应内容
 
-`{error: "success", "result": {mrn: "平台单号", status: 0/1/2}}`
+`{error: "success", "result": {mrn: "平台单号", status: 0/1/2, amount: "实际金额", originalAmount: "请求金额"}}`
 
 status 为0时表示等待下发，1表示下发成功，2表示下发失败。如果返回的status是1且callback是true，那么平台会再次回调callbackUrl，请参考下发回调说明。
 
