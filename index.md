@@ -75,14 +75,14 @@ title: 联合支付对接说明文档
 |appKey|是|商户用户接口调用的Key信息，如果不清楚请联系客服|
 |channel|是|支付通道ID，整数类型，请参考通道ID表|
 |mrn|是|商户平台订单号|
-|originalAmount|是|客人充值时提交的金额，单位元，精确到小数点后面两位|
+|originAmount|是|客人充值时提交的金额，单位元，精确到小数点后面两位|
 |sign|是|请求信息的签名信息，请参考回调签名说明|
 
 ### 回调签名说明
 
 请求数据签名格式
 
-`amount=实际金额&appKey=商户Key&channel=通道ID&mrn=平台单号&originalAmount=请求金额&key=商户密钥`
+`amount=实际金额&appKey=商户Key&channel=通道ID&mrn=平台单号&originAmount=请求金额&key=商户密钥`
 
 >其中**商户密钥**为商户接口的密钥信息，如果不清楚请联系客服
 
